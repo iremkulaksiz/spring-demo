@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:3.6.0-jdk-11-slim AS build
+FROM maven:3.8.1-jdk-11-slim AS build
 COPY src /home/spring/demo-mvn/demo/src
 COPY pom.xml /home/spring/demo-mvn/demo
 RUN mvn -f /home/spring/demo-mvn/demo/pom.xml clean package
